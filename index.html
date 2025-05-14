@@ -1,25 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MD Zihadul Islam - Portfolio</title>
-    
+    <!-- Basic Page Needs -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MD Zihadul Islam - Web Developer & CS Undergraduate Portfolio</title> 
+    <!-- Enhanced Title -->
+    <meta name="description" content="Explore the portfolio of MD Zihadul Islam, a passionate Web Developer and Computer Science Undergraduate. Check out my projects, skills, and experience."> 
+    <!-- Enhanced Description -->
+    <meta name="author" content="MD Zihadul Islam">
+    <meta name="keywords" content="front-end developer, web developer, JavaScript, HTML5, CSS3, React, web development projects, portfolio, MD Zihadul Islam"> <!-- Updated Keywords -->
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <!-- Improved mobile viewport settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#ffffff"> 
+    <!-- Theme color for mobile browsers -->
+
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta property="og:title" content="MD Zihadul Islam - Web Developer & CS Undergraduate Portfolio">
+    <meta property="og:description" content="Explore the portfolio of MD Zihadul Islam, a passionate Web Developer and Computer Science Undergraduate. Check out my projects, skills, and experience.">
+    <meta property="og:image" content="assets/img/profile.jpg"> 
+    <!-- Profile image for social media preview -->
+    <meta property="og:url" content="https://yourportfolio.com"> 
+    <!-- URL for social media sharing -->
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MD Zihadul Islam - Web Developer & CS Undergraduate Portfolio">
+    <meta name="twitter:description" content="Explore the portfolio of MD Zihadul Islam, a passionate Web Developer and Computer Science Undergraduate. Check out my projects, skills, and experience.">
+    <meta name="twitter:image" content="assets/img/profile.jpg">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
-    
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+
+
+    <!-- Lazy Load Polyfill for Images -->
+    <script>
+      if ('loading' in HTMLImageElement.prototype) {
+        // Native lazy loading supported
+      } else {
+        // Load lazyload.js if native support is not available
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js';
+        document.head.appendChild(script);
+      }
+    </script>
+
+    <!-- Inline CSS for Modal Styling (already provided in your code) -->
+    <style>
+        /* Fix for modal appearance */
+        .modal {
+          z-index: 1050;
+        }
+        .modal-header .close {
+          font-size: 28px;
+          color: #000;
+          opacity: 1;
+          text-shadow: none;
+          position: absolute;
+          right: 15px;
+          top: 15px;
+        }
+        .modal-content {
+          border-radius: 0;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .modal-backdrop {
+          background-color: rgba(0,0,0,0.5);
+        }
+    </style>
 </head>
 
+
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);" data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
@@ -29,7 +99,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-     
+                    <a href="#hero" class="site-logo"><img src="assets/img/logo.png" alt="logo"></a>
                 </div>
 
                 <div class="main-menu" id="portfolio-collapse">
@@ -38,7 +108,8 @@
                         <li class="page-scroll"><a href="#about">About</a></li>
                         <li class="page-scroll"><a href="#skills">Skills</a></li>
                         <li class="page-scroll"><a href="#research-experience">Experience</a></li>
-                        <li class="page-scroll"><a href="#portfolio">Portfolio</a></li>
+                        <li class="page-scroll"><a href="#portfolio">Recent Works</a></li>
+                        <li class="page-scroll"><a href="#certifications">Certifications</a></li>
                         <li class="page-scroll"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -194,155 +265,169 @@
         </section>
 
         <!-- Portfolio Section -->
- <!-- Portfolio Section -->
-<section id="portfolio" class="site-section section-portfolio">
-    <div class="container">
-        <div class="text-center">
-            <h3>Certifications</h3>
-            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-        </div>
-        <div class="row">
-            <!-- ISRO Certification -->
-            <div class="col-md-4 col-xs-6">
-                <div class="portfolio-item">
-                    <img src="assets/img/isro.jpg" class="img-res" alt="ISRO Certification">
-                    <div class="portfolio-item-info">
-                        <h4>ISRO Geodata Processing</h4>
-                        <a href="#" data-toggle="modal" data-target="#isroModal"><span class="glyphicon glyphicon-eye-open"></span></a>
-                        <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+        <section id="portfolio" class="site-section section-portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h3>My Recent Works</h3>
+                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio-1.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>Project Title</h4>
+                                <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio-2.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>Project Title</h4>
+                                <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio-3.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>Project Title</h4>
+                                <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Aspire Leadership Certification -->
-            <div class="col-md-4 col-xs-6">
-                <div class="portfolio-item">
-                    <img src="assets/img/aspire.jpg" class="img-res" alt="Aspire Leadership Certification">
-                    <div class="portfolio-item-info">
-                        <h4>Aspire Leadership by MIT</h4>
-                        <a href="#" data-toggle="modal" data-target="#aspireModal"><span class="glyphicon glyphicon-eye-open"></span></a>
-                        <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+        <!-- Certifications Section -->
+        <section id="certifications" class="site-section section-portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h3>Certifications</h3>
+                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                </div>
+                <div class="row">
+                    <!-- ISRO Certification -->
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/isro.jpg" class="img-res" alt="ISRO Certification">
+                            <div class="portfolio-item-info">
+                                <h4>ISRO Geodata Processing</h4>
+                                <a href="#" data-toggle="modal" data-target="#isroModal"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aspire Leadership Certification -->
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/aspire.jpg" class="img-res" alt="Aspire Leadership Certification">
+                            <div class="portfolio-item-info">
+                                <h4>Aspire Leadership by MIT</h4>
+                                <a href="#" data-toggle="modal" data-target="#aspireModal"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leadership Certification -->
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/leadership.jpg" class="img-res" alt="Leadership Certification">
+                            <div class="portfolio-item-info">
+                                <h4>Leadership Development</h4>
+                                <a href="#" data-toggle="modal" data-target="#leadershipModal"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Leadership Certification -->
-            <div class="col-md-4 col-xs-6">
-                <div class="portfolio-item">
-                    <img src="assets/img/leadership.jpg" class="img-res" alt="Leadership Certification">
-                    <div class="portfolio-item-info">
-                        <h4>Leadership Development</h4>
-                        <a href="#" data-toggle="modal" data-target="#leadershipModal"><span class="glyphicon glyphicon-eye-open"></span></a>
-                        <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+        <!-- ISRO Certification Modal -->
+        <div id="isroModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <img class="img-res" src="assets/img/isro.jpg" alt="ISRO Certification">
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title">ISRO Geodata Processing using Python</h4>
+                        <p><strong>Issuing Organization:</strong> Indian Space Research Organization</p>
+                        <p><strong>Date Earned:</strong> 2025</p>
+                        <p><strong>Skills:</strong> Python, Geospatial Data Analysis, Remote Sensing</p>
+                        <p>This certification demonstrates proficiency in processing and analyzing geospatial data using Python, with applications in satellite imagery and remote sensing.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" class="btn btn-fill" target="_blank">View Certificate</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- ISRO Certification Modal -->
-<div id="isroModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <img class="img-res" src="assets/img/isro.jpg" alt="ISRO Certification">
-            </div>
-            <div class="modal-body">
-                <h4>ISRO Geodata Processing using Python</h4>
-                <p><strong>Issuing Organization:</strong> Indian Space Research Organization</p>
-                <p><strong>Date Earned:</strong>2025</p>
-                <p><strong>Skills:</strong> Python, Geospatial Data Analysis, Remote Sensing</p>
-                <p>This certification demonstrates proficiency in processing and analyzing geospatial data using Python, with applications in satellite imagery and remote sensing.</p>
-            </div>
-            <div class="modal-footer">
-                <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" class="btn btn-fill" target="_blank">View Certificate</a>
+        <!-- Aspire Leadership Modal -->
+        <div id="aspireModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Aspire Leadership Program by MIT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/img/aspire.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="Aspire Leadership Certification">
+                        <div class="text-left">
+                            <p><strong>Issuing Organization:</strong> Massachusetts Institute of Technology</p>
+                            <p><strong>Date Earned:</strong> 2024</p>
+                            <p><strong>Skills:</strong> Leadership, Global Competencies, Personal Development</p>
+                            <p>This prestigious program from MIT focuses on developing leadership skills and global competencies through intensive training and mentorship.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" class="btn btn-fill" target="_blank">View Certificate</a>
+                        <button type="button" class="btn btn-border" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<!-- Add this CSS in your <head> or style.css -->
-    <style>
-        /* Fix for modal appearance */
-        .modal {
-          z-index: 1050; /* Ensure proper stacking */
-        }
-        .modal-header .close {
-          font-size: 28px; /* Make close button larger */
-          color: #000; /* Ensure visibility */
-          opacity: 1; /* Make fully visible */
-          text-shadow: none; /* Remove any shadows */
-          position: absolute;
-          right: 15px;
-          top: 15px;
-        }
-        .modal-content {
-          border-radius: 0; /* Clean square edges */
-          box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-        }
-        .modal-backdrop {
-          background-color: rgba(0,0,0,0.5); /* Adjust darkness */
-        }
-      </style>
-      
-      <!-- Updated Aspire Leadership Modal -->
-      <div id="aspireModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title">Aspire Leadership Program by MIT</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body text-center">
-                      <img src="assets/img/aspire.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="Aspire Leadership Certification">
-                      <div class="text-left">
-                          <p><strong>Issuing Organization:</strong> Massachusetts Institute of Technology</p>
-                          <p><strong>Date Earned:</strong> 2024</p>
-                          <p><strong>Skills:</strong> Leadership, Global Competencies, Personal Development</p>
-                          <p>This prestigious program from MIT focuses on developing leadership skills and global competencies through intensive training and mentorship.</p>
-                      </div>
-                  </div>
-                  <div class="modal-footer justify-content-center">
-                      <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" class="btn btn-fill" target="_blank">View Certificate</a>
-                      <button type="button" class="btn btn-border" data-dismiss="modal">Close</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Updated Leadership Development Modal -->
-      <div id="leadershipModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title">Leadership Development Program</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body text-center">
-                      <img src="assets/img/leadership.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="Leadership Certification">
-                      <div class="text-left">
-                          <p><strong>Issuing Organization:</strong> [Organization Name]</p>
-                          <p><strong>Date Earned:</strong> 2023</p>
-                          <p><strong>Skills:</strong> Team Management, Communication, Strategic Thinking</p>
-                          <p>This program focused on developing essential leadership skills including team management, effective communication, and strategic decision-making.</p>
-                      </div>
-                  </div>
-                  <div class="modal-footer justify-content-center">
-                      <button type="button" class="btn btn-fill" data-dismiss="modal">Close</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-      <!-- REQUIRED SCRIPTS (place before </body>) -->
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Leadership Development Modal -->
+        <div id="leadershipModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Leadership Development Program</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/img/leadership.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="Leadership Certification">
+                        <div class="text-left">
+                            <p><strong>Issuing Organization:</strong> [Organization Name]</p>
+                            <p><strong>Date Earned:</strong> 2023</p>
+                            <p><strong>Skills:</strong> Team Management, Communication, Strategic Thinking</p>
+                            <p>This program focused on developing essential leadership skills including team management, effective communication, and strategic decision-making.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-fill" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Counters Section -->
         <section class="site-section section-counters text-center">
             <div class="container">
@@ -436,5 +521,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        // Preloader
+        $(window).on('load', function() {
+            $('.preloader').fadeOut('slow');
+        });
+        
+        // Initialize tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
 </body>
 </html>
