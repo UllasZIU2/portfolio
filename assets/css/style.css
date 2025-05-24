@@ -928,3 +928,74 @@ a.icon-up-bg:hover {color: #212121;}
 .modal-backdrop {
     background-color: rgba(0,0,0,0.5);
 }
+/* Style for the About Section */
+#about {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #213495; /* A vibrant red similar to the one in the image */
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Download Button Styling */
+.btn-primary {
+    background: linear-gradient(45deg, #3c5776, #feb47b); /* Gradient from the image (orange-pink) */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase text for a clean look */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #122a5c, #441408); /* Reversed gradient on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Other Styles Remain the Same */
+.contact-info {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    font-size: 20px;
+}
+
+.social-icon {
+    color: #e74c3c;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #fff4f3;
+}
+
+.img-lines {
+    max-width: 100px;
+    margin
