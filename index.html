@@ -1,90 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Basic Page Needs -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MD Zihadul Islam - Web Developer & CS Undergraduate Portfolio</title> 
-    <!-- Enhanced Title -->
-    <meta name="description" content="Explore the portfolio of MD Zihadul Islam, a passionate Web Developer and Computer Science Undergraduate. Check out my projects, skills, and experience."> 
-    <!-- Enhanced Description -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MD Zihadul Islam - Web Developer & CS Undergraduate Portfolio</title>
+    <meta name="description" content="Explore the portfolio of MD Zihadul Islam, a passionate Web Developer and Computer Science Undergraduate. Check out my projects, skills, and experience.">
     <meta name="author" content="MD Zihadul Islam">
-    <meta name="keywords" content="front-end developer, web developer, JavaScript, HTML5, CSS3, React, web development projects, portfolio, MD Zihadul Islam"> <!-- Updated Keywords -->
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
-    <!-- Improved mobile viewport settings -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#ffffff"> 
-    <!-- Theme color for mobile browsers -->
-
-    <!-- Open Graph Meta Tags (for social sharing) -->
-    <meta property="og:title" content="MD Zihadul Islam - Web Developer & CS Undergraduate Portfolio">
-    <meta property="og:description" content="Explore the portfolio of MD Zihadul Islam, a passionate Web Developer and Computer Science Undergraduate. Check out my projects, skills, and experience.">
-    <meta property="og:image" content="assets/img/profile.jpg"> 
-    <!-- Profile image for social media preview -->
-    <meta property="og:url" content="https://yourportfolio.com"> 
-    <!-- URL for social media sharing -->
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MD Zihadul Islam - Web Developer & CS Undergraduate Portfolio">
-    <meta name="twitter:description" content="Explore the portfolio of MD Zihadul Islam, a passionate Web Developer and Computer Science Undergraduate. Check out my projects, skills, and experience.">
-    <meta name="twitter:image" content="assets/img/profile.jpg">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-
+    <meta name="keywords" content="front-end developer, web developer, JavaScript, HTML5, CSS3, React, web development projects, portfolio, MD Zihadul Islam">
+    
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
-
-    <!-- Stylesheets -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
-
-
-
-    <!-- Lazy Load Polyfill for Images -->
-    <script>
-      if ('loading' in HTMLImageElement.prototype) {
-        // Native lazy loading supported
-      } else {
-        // Load lazyload.js if native support is not available
-        var script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js';
-        document.head.appendChild(script);
-      }
-    </script>
-
-    <!-- Inline CSS for Modal Styling (already provided in your code) -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <style>
-        /* Fix for modal appearance */
-        .modal {
-          z-index: 1050;
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
         }
-        .modal-header .close {
-          font-size: 28px;
-          color: #000;
-          opacity: 1;
-          text-shadow: none;
-          position: absolute;
-          right: 15px;
-          top: 15px;
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
         }
-        .modal-content {
-          border-radius: 0;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        
+        /* Header */
+        .site-header {
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
-        .modal-backdrop {
-          background-color: rgba(0,0,0,0.5);
+        
+        .navbar-brand {
+            font-weight: 700;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+        }
+        
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .job-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        /* Buttons */
+        .btn {
+            border-radius: 30px;
+            padding: 10px 25px;
+            font-weight: 600;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-fill {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+        
+        .btn-fill:hover {
+            background-color: transparent;
+            color: white;
+        }
+        
+        .btn-border {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-border:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 20px auto;
+        }
+        
+        /* About Section */
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .social-links {
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Experience Cards */
+        .experience-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .experience-img-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .experience-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .experience-card:hover .experience-img {
+            transform: scale(1.1);
+        }
+        
+        .experience-content {
+            padding: 20px;
+            background: white;
+        }
+        
+        .experience-subtitle {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .experience-details {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .experience-details li {
+            margin-bottom: 8px;
+        }
+        
+        /* Portfolio Items */
+        .portfolio-item {
+            position: relative;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-item-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 152, 219, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-item-info {
+            opacity: 1;
+        }
+        
+        .portfolio-item-info h4 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .portfolio-item-info a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        
+        /* Skills Section */
+        .progress {
+            height: 10px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            background: #e0e0e0;
+        }
+        
+        .progress-bar {
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+        
+        /* Contact Section */
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: var(--light-color);
+        }
+        
+        .split-half {
+            flex: 1;
+            min-width: 300px;
+            padding: 50px;
+        }
+        
+        .contact-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card i {
+            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .social-icons {
+            margin: 30px 0;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--dark-color);
+            transform: translateY(-5px);
+        }
+        
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        form textarea {
+            height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero {
+                padding: 120px 0 80px;
+                text-align: center;
+            }
+            
+            .hero img {
+                margin-top: 30px;
+                max-width: 80%;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .split-half {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0 40px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .job-title {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
         }
     </style>
 </head>
-
 
 <body>
     <!-- Preloader -->
@@ -92,445 +421,482 @@
         <div class="spinner"></div>
     </div>
 
-    <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);" data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
-        <nav id="primary-navigation" class="site-navigation">
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-collapse" aria-expanded="false">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="main-menu" id="portfolio-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="page-scroll"><a href="#hero">Home</a></li>
-                        <li class="page-scroll"><a href="#about">About</a></li>
-                        <li class="page-scroll"><a href="#skills">Skills</a></li>
-                        <li class="page-scroll"><a href="#research-experience">Experience</a></li>
-                        <li class="page-scroll"><a href="#portfolio">Recent Works</a></li>
-                        <li class="page-scroll"><a href="#certifications">Certifications</a></li>
-                        <li class="page-scroll"><a href="#contact">Get in Touch</a></li>
+                <a class="navbar-brand" href="#">MD Zihadul Islam</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#research-experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Works</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div id="hero" class="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2">
                     <h1>MD Zihadul Islam</h1>
-                    <div class="page-scroll">
-                        <p class="job-title">Web Developer & CS Undergraduate</p>
+                    <p class="job-title">Web Developer & CS Undergraduate</p>
+                    <div class="d-flex flex-wrap">
                         <a href="#contact" class="btn btn-fill">Hire me</a>
-                        <div class="clearfix visible-xxs"></div>
                         <a href="#portfolio" class="btn btn-border">Explore more</a>
                     </div>
                 </div>
-                <div class="col-md-6 text-right">
-                    <img src="assets/img/me.png" alt="MD Zihadul Islam">
+                <div class="col-lg-6 order-lg-2 order-1 text-center">
+                    <img src="assets/img/me.png" alt="MD Zihadul Islam" class="img-fluid">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <main id="main" class="site-main">
-<!-- About Section -->
-<!-- About Section -->
-<section id="about" class="site-section section-about text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h2 class="heading">Hello, I’m MD Zihadul Islam</h2>
-                <h4 class="subheading">Computer Science & Engineering Graduate</h4>
-                <p class="intro-text">I’m a passionate Computer Science graduate from BRAC University, skilled in web development, AI/ML automation, and data-driven problem solving. With technical expertise and leadership experience from Rover Scouting, Aspire Leaders Program (Harvard), and Duke of Edinburgh’s Award, I am constantly evolving to create scalable tech solutions.</p>
-                <a href="assets/img/Resume.pdf" class="btn btn-primary">Download My CV</a>
-                <div class="contact-info">
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/zihadul.islam.07714" class="social-icon"><img src="assets/img/fbicon.gif"  alt="" height=40></a>
-                    
-                    <a href="https://www.linkedin.com/in/mdzihadulislam/" class="social-icon"><img src="assets/img/linkedicon.gif" alt=""height=40></a>
-                    <a href="https://github.com/UllasZIU2" class="social-icon"><img src="assets/img/githubicon.gif" alt=""height=40></a>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Hello, I'm MD Zihadul Islam</h2>
+                    <h4 class="text-primary mb-4">Computer Science & Engineering Graduate</h4>
+                    <p class="intro-text">I'm a passionate Computer Science graduate from BRAC University, skilled in web development, AI/ML automation, and data-driven problem solving. With technical expertise and leadership experience from Rover Scouting, Aspire Leaders Program (Harvard), and Duke of Edinburgh's Award, I am constantly evolving to create scalable tech solutions.</p>
+                    <a href="assets/img/Resume.pdf" class="btn btn-primary mb-4">Download My CV</a>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/zihadul.islam.07714" class="social-icon"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/mdzihadulislam/" class="social-icon"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                        <a href="https://github.com/UllasZIU2" class="social-icon"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
- 
-        <!-- Research & Experience Section -->
-        <section id="research-experience" class="site-section section-research-experience">
-            <div class="container">
-                <h2 class="text-center section-title">Research & Experience</h2>
-<p class="text-center">
-    <img src="assets/img/lines.svg" class="img-lines" alt="lines" height="50" width="500">
-</p>                <div class="row">
-                    <!-- IEEE Publication -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="experience-card">
-                            <div class="experience-img-container">
-                                <img src="assets/img/ieee.jpg" class="img-fluid experience-img" alt="IEEE ICCIT 2023">
-                            </div>
-                            <div class="experience-content">
-                                <h3>IEEE ICCIT 2023</h3>
-                                <p class="experience-subtitle">Research Paper Publication</p>
-                                <ul class="experience-details">
-                                    <li>Published paper on contextual uniqueness assessment</li>
-                                    <li>Multi-label classification approach</li>
-                                    <li>DOI: 10.1109/ICCIT60459.2023.10441521</li>
-                                </ul>
-                                <a href="https://doi.org/10.1109/ICCIT60459.2023.10441521" class="btn btn-outline-primary" target="_blank">View Publication</a>
-                            </div>
+    <!-- Research & Experience Section -->
+    <section id="research-experience" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Research & Experience</h2>
+            <div class="row">
+                <!-- IEEE Publication -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="experience-card">
+                        <div class="experience-img-container">
+                            <img src="assets/img/ieee.jpg" class="img-fluid experience-img" alt="IEEE ICCIT 2023">
+                        </div>
+                        <div class="experience-content">
+                            <h3>IEEE ICCIT 2023</h3>
+                            <p class="experience-subtitle">Research Paper Publication</p>
+                            <ul class="experience-details">
+                                <li>Published paper on contextual uniqueness assessment</li>
+                                <li>Multi-label classification approach</li>
+                                <li>DOI: 10.1109/ICCIT60459.2023.10441521</li>
+                            </ul>
+                            <a href="https://doi.org/10.1109/ICCIT60459.2023.10441521" class="btn btn-outline-primary" target="_blank">View Publication</a>
                         </div>
                     </div>
-                    
-                    <!-- Robotics Club -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="experience-card">
-                            <div class="experience-img-container">
-                                <img src="assets/img/roboticsclub.png" class="img-fluid experience-img" alt="Robotics Club">
-                            </div>
-                            <div class="experience-content">
-                                <h3>BRACU Robotics Club</h3>
-                                <p class="experience-subtitle">Assistent Director - Event Management</p>
-                                <ul class="experience-details">
-                                    <li>Organized tech competitions and workshops</li>
-                                    <li>Managed team of 30+ members</li>
-                                    <li>Coordinated university-wide Robotics events</li>
-                                </ul>
-                                <a href="https://bracurobu.com/" class="btn btn-outline-primary">Visit ROBU</a>
-                            </div>
+                </div>
+                
+                <!-- Robotics Club -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="experience-card">
+                        <div class="experience-img-container">
+                            <img src="assets/img/roboticsclub.png" class="img-fluid experience-img" alt="Robotics Club">
+                        </div>
+                        <div class="experience-content">
+                            <h3>BRACU Robotics Club</h3>
+                            <p class="experience-subtitle">Assistent Director - Event Management</p>
+                            <ul class="experience-details">
+                                <li>Organized tech competitions and workshops</li>
+                                <li>Managed team of 30+ members</li>
+                                <li>Coordinated university-wide Robotics events</li>
+                            </ul>
+                            <a href="https://bracurobu.com/" class="btn btn-outline-primary">Visit ROBU</a>
                         </div>
                     </div>
-                    
-                    <!-- Web Venture -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="experience-card">
-                            <div class="experience-img-container">
-                                <img src="assets/img/mswebventure.png" class="img-fluid experience-img" alt="MS Web Venture">
-                            </div>
-                            <div class="experience-content">
-                                <h3>MS Web Venture</h3>
-                                <p class="experience-subtitle">Senior Web Developer & Administrator</p>
-                                <ul class="experience-details">
-                                    <li>Developed and maintained client websites</li>
-                                    <li>Implemented user feedback systems</li>
-                                    <li>Supported development updates</li>
-                                </ul>
-                                <a href="https://mswebventure.io/" class="btn btn-outline-primary">Visit MSV</a>
-                            </div>
+                </div>
+                
+                <!-- Web Venture -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="experience-card">
+                        <div class="experience-img-container">
+                            <img src="assets/img/mswebventure.png" class="img-fluid experience-img" alt="MS Web Venture">
+                        </div>
+                        <div class="experience-content">
+                            <h3>MS Web Venture</h3>
+                            <p class="experience-subtitle">Senior Web Developer & Administrator</p>
+                            <ul class="experience-details">
+                                <li>Developed and maintained client websites</li>
+                                <li>Implemented user feedback systems</li>
+                                <li>Supported development updates</li>
+                            </ul>
+                            <a href="https://mswebventure.io/" class="btn btn-outline-primary">Visit MSV</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <!-- Certifications Section -->
-        <section id="certifications" class="site-section section-portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h3>Certifications</h3>
-                    <p class="text-center">
-    <img src="assets/img/lines.svg" class="img-lines" alt="lines" height="50" width="500">
-</p>  
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Certifications</h2>
+            <div class="row">
+                <!-- ISRO Certification -->
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/img/isro.jpg" class="img-fluid" alt="ISRO Certification">
+                        <div class="portfolio-item-info">
+                            <h4>ISRO Geodata Processing</h4>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#isroModal"><i class="fas fa-eye"></i></a>
+                            <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" target="_blank"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <!-- ISRO Certification -->
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/isro.jpg" class="img-res" alt="ISRO Certification">
-                            <div class="portfolio-item-info">
-                                <h4>ISRO Geodata Processing</h4>
-                                <a href="#" data-toggle="modal" data-target="#isroModal"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
+
+                <!-- Aspire Leadership Certification -->
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/img/aspire.jpg" class="img-fluid" alt="Aspire Leadership Certification">
+                        <div class="portfolio-item-info">
+                            <h4>Aspire Leadership by MIT</h4>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#aspireModal"><i class="fas fa-eye"></i></a>
+                            <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" target="_blank"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Aspire Leadership Certification -->
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/aspire.jpg" class="img-res" alt="Aspire Leadership Certification">
-                            <div class="portfolio-item-info">
-                                <h4>Aspire Leadership by MIT</h4>
-                                <a href="#" data-toggle="modal" data-target="#aspireModal"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Leadership Certification -->
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/leadership.png" class="img-res" alt="Leadership Certification">
-                            <div class="portfolio-item-info">
-                                <h4>Leadership Development</h4>
-                                <a href="#" data-toggle="modal" data-target="#leadershipModal"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
+                <!-- Leadership Certification -->
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/img/leadershiptemp.png" class="img-fluid" alt="Leadership Certification">
+                        <div class="portfolio-item-info">
+                            <h4>Leadership Development</h4>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#leadershipModal"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- ISRO Certification Modal -->
-        <div id="isroModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <img class="img-res" src="assets/img/isro.jpg" alt="ISRO Certification">
-                    </div>
-                    <div class="modal-body">
-                        <h4 class="modal-title">ISRO Geodata Processing using Python</h4>
+        </div>
+    </section>
+    <!-- Modals -->
+    <!-- ISRO Certification Modal -->
+    <div class="modal fade" id="isroModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISRO Geodata Processing using Python</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="assets/img/isro.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="ISRO Certification">
+                    <div class="text-left">
                         <p><strong>Issuing Organization:</strong> Indian Space Research Organization</p>
                         <p><strong>Date Earned:</strong> 2025</p>
                         <p><strong>Skills:</strong> Python, Geospatial Data Analysis, Remote Sensing</p>
                         <p>This certification demonstrates proficiency in processing and analyzing geospatial data using Python, with applications in satellite imagery and remote sensing.</p>
                     </div>
-                    <div class="modal-footer">
-                        <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" class="btn btn-fill" target="_blank">View Certificate</a>
-                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="https://drive.google.com/file/d/1wsq_naRBgaanX_hDPYFeZ13YBRZDzi0R/view?usp=drive_link" class="btn btn-primary" target="_blank">View Certificate</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-
-        <!-- Aspire Leadership Modal -->
-        <div id="aspireModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Aspire Leadership Program by MIT</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img src="assets/img/aspire.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="Aspire Leadership Certification">
-                        <div class="text-left">
-                            <p><strong>Issuing Organization:</strong> Massachusetts Institute of Technology</p>
-                            <p><strong>Date Earned:</strong> 2024</p>
-                            <p><strong>Skills:</strong> Leadership, Global Competencies, Personal Development</p>
-                            <p>This prestigious program from MIT focuses on developing leadership skills and global competencies through intensive training and mentorship.</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" class="btn btn-fill" target="_blank">View Certificate</a>
-                        <button type="button" class="btn btn-border" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Leadership Development Modal -->
-        <div id="leadershipModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Leadership Development Program</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img src="assets/img/leadership.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="Leadership Certification">
-                        <div class="text-left">
-                            <p><strong>Issuing Organization:</strong> [Organization Name]</p>
-                            <p><strong>Date Earned:</strong> 2023</p>
-                            <p><strong>Skills:</strong> Team Management, Communication, Strategic Thinking</p>
-                            <p>This program focused on developing essential leadership skills including team management, effective communication, and strategic decision-making.</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-fill" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- My Recent Works Section -->
-        <section id="portfolio" class="site-section section-portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h3>My Recent Works</h3>
-                    <p class="text-center">
-    <img src="assets/img/lines.svg" class="img-lines" alt="lines" height="50" width="500">
-</p>  
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-1.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-2.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-3.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-       <!-- Skills Section -->
-        <section id="skills" class="site-section section-skills">
-            <div class="container">
-                <div class="text-center">
-                    <h3>My Skills</h3>
-                    <p class="text-center">
-    <img src="assets/img/lines.svg" class="img-lines" alt="lines" height="50" width="500">
-</p>  
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="skill">
-                            <h4>Web Development (Front-end)</h4>
-                            <div class="progress">
-                                <div class="progress-bar" data-transitiongoal="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h4>Python (Automation, AI)</h4>
-                            <div class="progress">
-                                <div class="progress-bar" data-transitiongoal="85"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                            <h4>Arduino</h4>
-                            <div class="progress">
-                                <div class="progress-bar" data-transitiongoal="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h4>GeoData Processing</h4>
-                            <div class="progress">
-                                <div class="progress-bar" data-transitiongoal="75"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="skill">
-                            <h4>Leadership</h4>
-                            <div class="progress">
-                                <div class="progress-bar" data-transitiongoal="95"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-           <!-- skills  Modals -->
-    <div id="portfolioItem1" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-            <img class="img-res" src="assets/img/portfolio-1.jpg" alt="Web Development">
-          </div>
-          <div class="modal-body">
-            <h4 class="modal-title">Web Development Projects</h4>
-            <p>Develop and maintain responsive websites with front-end tools and frameworks. Specializing in creating user-friendly interfaces and implementing modern web technologies to deliver high-performance applications.</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#" class="btn btn-fill">View Projects</a>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="assets/js/skrollr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
-    <script src="assets/js/jquery.countTo.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- Aspire Leadership Modal -->
+    <div class="modal fade" id="aspireModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aspire Leadership Program by MIT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="assets/img/aspire.jpg" class="img-fluid mb-3" style="max-height: 200px;" alt="Aspire Leadership Certification">
+                    <div class="text-left">
+                        <p><strong>Issuing Organization:</strong> Massachusetts Institute of Technology</p>
+                        <p><strong>Date Earned:</strong> 2024</p>
+                        <p><strong>Skills:</strong> Leadership, Global Competencies, Personal Development</p>
+                        <p>This prestigious program from MIT focuses on developing leadership skills and global competencies through intensive training and mentorship.</p>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="https://drive.google.com/file/d/1ELrm3NcxtAbVa6BenW9LJAxf8lxVBlPC/view?usp=drive_link" class="btn btn-primary" target="_blank">View Certificate</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Leadership Certification Modal -->
+<div class="modal fade" id="leadershipModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Leadership Development Certification</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="assets/img/leadershiptemp.png" class="img-fluid mb-3" style="max-height: 200px;" alt="Leadership Development Certification">
+                <div class="text-left">
+                    <p><strong>Issuing Organization:</strong> International Leadership Institute</p>
+                    <p><strong>Date Earned:</strong> 2024</p>
+                    <p><strong>Skills:</strong> Team Management, Strategic Thinking, Communication</p>
+                    <p>This certification signifies completion of a comprehensive leadership development course that focuses on enhancing decision-making, communication, and strategic management abilities in professional settings.</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <a href="#" class="btn btn-primary" target="_blank">View Certificate</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+
+    <!-- My Recent Works Section -->
+    <section id="portfolio" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center section-title">My Recent Works</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/img/portfolio-1.jpg" class="img-fluid" alt="Project 1">
+                        <div class="portfolio-item-info">
+                            <h4>Project Title</h4>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioItem1"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/img/portfolio-2.jpg" class="img-fluid" alt="Project 2">
+                        <div class="portfolio-item-info">
+                            <h4>Project Title</h4>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioItem2"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/img/portfolio-3.jpg" class="img-fluid" alt="Project 3">
+                        <div class="portfolio-item-info">
+                            <h4>Project Title</h4>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioItem3"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Modern Skills Section with Animated Progress Bars -->
+<section id="skills" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-gradient">My Expertise</h2>
+            <p class="lead text-muted">Technologies I work with daily</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Skill Card 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card card h-100 border-0 shadow-sm hover-shadow-lg transition-all">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-shape icon-lg bg-primary bg-gradient rounded-3 mb-4 p-3 d-inline-flex">
+                            <i class="fas fa-code text-white fs-3"></i>
+                        </div>
+                        <h3 class="h5">Front-end Development</h3>
+                        <div class="progress mt-3 mb-2" style="height: 10px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
+                                 role="progressbar" style="width: 90%" 
+                                 aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">90% Proficiency</small>
+                        <p class="mt-3 mb-0 text-muted">HTML5, CSS3, JavaScript, React, Vue</p>
+                        <button class="btn btn-sm btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#webDevModal">
+                            View Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card card h-100 border-0 shadow-sm hover-shadow-lg transition-all">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-shape icon-lg bg-danger bg-gradient rounded-3 mb-4 p-3 d-inline-flex">
+                            <i class="fab fa-python text-white fs-3"></i>
+                        </div>
+                        <h3 class="h5">Python Development</h3>
+                        <div class="progress mt-3 mb-2" style="height: 10px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" 
+                                 role="progressbar" style="width: 85%" 
+                                 aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">85% Proficiency</small>
+                        <p class="mt-3 mb-0 text-muted">Automation, AI, Flask, Django, Data Science</p>
+                        <button class="btn btn-sm btn-outline-danger mt-3" data-bs-toggle="modal" data-bs-target="#pythonModal">
+                            View Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card card h-100 border-0 shadow-sm hover-shadow-lg transition-all">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-shape icon-lg bg-warning bg-gradient rounded-3 mb-4 p-3 d-inline-flex">
+                            <i class="fas fa-microchip text-white fs-3"></i>
+                        </div>
+                        <h3 class="h5">Arduino/IoT</h3>
+                        <div class="progress mt-3 mb-2" style="height: 10px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" 
+                                 role="progressbar" style="width: 70%" 
+                                 aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">70% Proficiency</small>
+                        <p class="mt-3 mb-0 text-muted">Embedded Systems, Sensors, Robotics</p>
+                        <button class="btn btn-sm btn-outline-warning mt-3" data-bs-toggle="modal" data-bs-target="#arduinoModal">
+                            View Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card card h-100 border-0 shadow-sm hover-shadow-lg transition-all">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-shape icon-lg bg-success bg-gradient rounded-3 mb-4 p-3 d-inline-flex">
+                            <i class="fas fa-globe-americas text-white fs-3"></i>
+                        </div>
+                        <h3 class="h5">GeoData Processing</h3>
+                        <div class="progress mt-3 mb-2" style="height: 10px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
+                                 role="progressbar" style="width: 75%" 
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">75% Proficiency</small>
+                        <p class="mt-3 mb-0 text-muted">GIS, Remote Sensing, Spatial Analysis</p>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#geoModal">
+                            View Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Skills -->
+        <div class="mt-5 pt-4">
+            <h4 class="text-center mb-4">Other Skills & Technologies</h4>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <span class="badge bg-light text-dark border py-2 px-3">Git/GitHub</span>
+                <span class="badge bg-light text-dark border py-2 px-3">Docker</span>
+                <span class="badge bg-light text-dark border py-2 px-3">SQL</span>
+                <span class="badge bg-light text-dark border py-2 px-3">Bootstrap</span>
+                <span class="badge bg-light text-dark border py-2 px-3">Tailwind CSS</span>
+                <span class="badge bg-light text-dark border py-2 px-3">Figma</span>
+                <span class="badge bg-light text-dark border py-2 px-3">Linux</span>
+                <span class="badge bg-light text-dark border py-2 px-3">REST APIs</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Add similar modals for other skills (pythonModal, arduinoModal, geoModal) -->
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Preloader
-        $(window).on('load', function() {
-            $('.preloader').fadeOut('slow');
+        window.addEventListener('load', function() {
+            document.querySelector('.preloader').style.display = 'none';
         });
         
         // Initialize tooltips
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 
-<div class="split-container">
-  <!-- Left side: Contact Form -->
-  <div class="split-half">
-    <h3>Contact</h3>
-    <form>
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
-    </form>
-    
-  </div>
-
-  <!-- Right side: Modern Footer -->
-  <div class="split-half">
-    <h2>Get in Touch</h2>
-    <p>
-      Ecosystem bootstrapping learning curve lean startup disruptive.<br>
-      Marketing long tail disruptive agile development partner.
-    </p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
+    <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <div class="contact-form-container">
+                    <h3>Contact</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-send">Send Message <i class="fas fa-check"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="col-md-6">
+                <div class="contact-info-container">
+                    <h2>Get in Touch</h2>
+                    <p class="contact-description">
+                        Ecosystem bootstrapping learning curve lean startup disruptive.<br>
+                        Marketing long tail disruptive agile development partner.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-person">
+                            <p><strong>MD Zihadul Islam</strong></p>
+                        </div>
+                        <div class="contact-email">
+                            <p><strong>mdzihadulisl4m@gmail.com</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="contact-cards">
- <div class="contact-card">
-  <i class="fab fa-linkedin-in"></i>
-  <p><a href="https://www.linkedin.com/in/mdzihadulislam/" target="_blank">MD Zihadul Islam</a></p>
-</div>
-      <div class="contact-card">
-        <i class="fas fa-envelope"></i>
-        <p><a href="mailto:contact@example.com">mdzihadulisl4m@gmail.com</a></p>
-      </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2023 MD Zihadul Islam. All rights reserved.</p>
     </div>
-  </div>
-</div>
-
-
-
-
- 
+</footer>
 </body>
 </html>
