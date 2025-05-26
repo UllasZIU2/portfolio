@@ -1443,19 +1443,22 @@
 }
 
 /* Modern Social Icons */
+/* Social Icons Container */
 .social-icons-container {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Flexbox for social icons */
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-.social-icon {
+/* Social Icon Styling */
+.social-icons .social-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1469,7 +1472,8 @@
     overflow: hidden;
 }
 
-.social-icon::before {
+/* Social Icon Hover Effect */
+.social-icons .social-icon::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -1480,36 +1484,49 @@
     transition: transform 0.3s ease;
 }
 
-.social-icon:hover::before {
+.social-icons .social-icon:hover::before {
     transform: scale(1);
 }
 
-.social-icon i {
+/* Social Icon Font Size */
+.social-icons .social-icon i {
     position: relative;
     z-index: 1;
 }
 
-/* Individual icon colors */
-.social-icon.instagram {
+/* Instagram Icon */
+.social-icons .social-icon.instagram {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
-.social-icon.linkedin {
+/* LinkedIn Icon */
+.social-icons .social-icon.linkedin {
     background: #0077b5;
 }
 
-.social-icon.facebook {
+/* Facebook Icon */
+.social-icons .social-icon.facebook {
     background: #3b5998;
 }
 
-.social-icon.github {
+/* GitHub Icon */
+.social-icons .social-icon.github {
     background: #333;
 }
 
-.social-icon:hover {
+/* Hover Effect */
+.social-icons .social-icon:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Additional Class for Other Icons */
+.other-icons .social-icon {
+    /* Style for other icons to ensure no interference */
+    background: transparent;
+    color: #000; /* Example color for non-social icons */
+}
+
 </style>
 <!-- Footer -->
 <footer class="footer">
